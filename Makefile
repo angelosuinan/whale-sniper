@@ -10,7 +10,7 @@ build:
 		$(COMPOSE_CMD) build
 
 log-web:
-		$(COMPOSE_CMD) logs --tail 10 -f web
+		$(COMPOSE_CMD) logs web
 
 run-web:
 		$(COMPOSE_RUN) web
@@ -18,3 +18,5 @@ run-web:
 restart-web:
 		$(COMPOSE_CMD) restart web
 
+install-web:
+		$(COMPOSE_CMD) run --rm web npm install
