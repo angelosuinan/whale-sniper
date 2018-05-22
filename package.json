@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "mocha $(find test -name '*.js') || true"
+    "test": "jest --watch test/**/*.test.js"
   },
   "author": "angelo suinan",
   "license": "ISC",
@@ -14,9 +14,8 @@
     "mongoose": "^5.0.17"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
     "eslint": "^4.19.1",
-    "mocha": "^5.1.1",
+    "jest": "^22.4.4",
     "supertest": "^3.0.0"
   }
 }

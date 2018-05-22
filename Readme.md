@@ -6,10 +6,10 @@
 
 ### references
 
-https://mochajs.org/
+https://facebook.github.io/jest/docs/en/getting-started.html jest testing in node (change from mocha)
 
 https://github.com/visionmedia/supertest test APIs
 
-http://www.chaijs.com/api/bdd/ TDD BDD
 
 https://github.com/sahat/hackathon-starter/blob/master/app.js nodejs starter pack
+

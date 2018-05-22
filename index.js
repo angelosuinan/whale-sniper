@@ -23,6 +23,5 @@ app.listen(app.get('port'), function () {
 }
 
 module.exports = {
-  server: server,
   app: app
 }

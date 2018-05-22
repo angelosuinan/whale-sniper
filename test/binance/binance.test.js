@@ -1,4 +1,3 @@
-const assert = require('chai').assert;
 //const sayHello = require('../../binance/index').sayHello;
 //const addNumber = require('../../binance/index').addNumbers;
 
@@ -9,23 +8,16 @@ sayHelloResult = binance.sayHello();
 addNumberResult = binance.addNumbers(5,5); 
 describe('Binance', function(){
     describe("sayHello", function(){
-        it("app should return hello", function(){
-            assert.equal(sayHelloResult, 'hello');
+        it("app should return hello", () => {
+            expect(sayHelloResult).toBe('hello');
         });
-        
-    
-        it(" say hello should return type string", function(){
-           
-            assert.typeOf(sayHelloResult, 'string');
+        it ('two plus two is four', () => {
+            expect(2 + 2).toBe(4);
         });
     })
-    
     describe('addnumbers', function(){
         it("addnumber should be above 5", function(){
-
-            assert.isAbove(addNumberResult, 5);
+            expect(addNumberResult).toBeGreaterThan(5);
         })
     })
-    
-  
 });
