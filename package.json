@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "jest --watch test/**/*.test.js"
+    "test": "jest --watch test/**/*.test.js",
+    "setup": "sequelize db:create db_dev && npm run migrate",
+    "migrate": "sequelize db:migrate"
   },
   "author": "angelo suinan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.5",
+    "sequelize-cli": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

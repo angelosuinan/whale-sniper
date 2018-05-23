@@ -17,4 +17,9 @@ services:
     image: tianon/true
     volumes:
       - /data/db
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+
     
