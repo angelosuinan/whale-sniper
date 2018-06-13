@@ -1,17 +1,13 @@
-//Load express module with `require` directive
 const express = require('express')
 const app = express()
 //const mongoose = require('mongoose')
 
-//DB setup
-
-
 app.set('host', '0.0.0.0')
 app.set('port', 8000)
 //Define request response in root URL (/)
-app.get('/', function(req, res) {
-  res.send('Hello World!')
-})
+app.use('/', index)
+app.use('/graphql', require('./routes/graphql'))
+
 
 // dont run if running test
 if (!module.parent) {
@@ -20,7 +16,6 @@ if (!module.parent) {
     console.log('app listening on port 8081!')
   })
 }
-
 
 // models
 
